@@ -6,7 +6,5 @@ Repositório destinado ao processo seletivo da Target Sistemas
 - Verificar se um número pertence a sequência de Fibonacci
 - Inverter palavra/string
 - Mostrar o percentual participativo de cada estado de acordo com uma lista de valores pré-estabelecida
-
 <br><br>
-
 > LinkedIn: https://www.linkedin.com/in/caioluppo/
