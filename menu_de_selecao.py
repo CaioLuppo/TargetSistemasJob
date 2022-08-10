@@ -1,9 +1,10 @@
 # imports
 from exercicios import fibonacci
+from exercicios import percentual
 
 def mostra_cabecalho():
       # Cabeçalho
-      print("******************************************************\n"
+      print("\n******************************************************\n"
             "* PROCESSO SELETIVO TARGET SISTEMAS - By: Caio Luppo *\n"
             "******************************************************\n")
 
@@ -25,15 +26,15 @@ def escolhe_questao():
             try:
                   opcao = int(opcao_escolhida)
                   if opcao in opcoes:
-                        match opcoes:
+                        match opcao:
                               case 1:
-                                    print("")
                                     fibonacci.init()
                                     mostra_cabecalho()
                               case 2:
-                                    print("Op2")
+                                    print("")
                               case 3:
-                                    print("Op3")
+                                    percentual.init()
+                                    mostra_cabecalho()
                               case 4:
                                     print("Op4")
                   else:
