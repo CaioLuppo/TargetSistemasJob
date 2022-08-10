@@ -1,6 +1,5 @@
 # imports
-from exercicios import fibonacci
-from exercicios import percentual
+from exercicios import fibonacci, percentual, inverter_string
 
 def mostra_cabecalho():
       # Cabeçalho
@@ -36,7 +35,8 @@ def escolhe_questao():
                                     percentual.init()
                                     mostra_cabecalho()
                               case 4:
-                                    print("Op4")
+                                    inverter_string.init()
+                                    mostra_cabecalho()
                   else:
                         print('\033[91m' + "Oops! Opção inválida, digite um número entre 1 e 4!" + '\033[0m')
             except:
