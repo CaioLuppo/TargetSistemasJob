@@ -1,4 +1,3 @@
-
 def init():
 
     _mostra_cabeçalho()
@@ -43,3 +42,6 @@ def _verifica_existencia(numero_escolhido):
             return print(f"\033[92mO número existe na sequência e está na {str(contador+3)}º posição! \033[0m")
 
     return print("\033[91mO número informado não existe na sequência! \033[0m")
+
+if __name__ == '__main__':
+    init()
