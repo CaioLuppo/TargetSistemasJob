@@ -26,3 +26,6 @@ def mostra_cabeçalho():
           "*******************************\n"
           "* Percentual de representação *\n"
           "*******************************\n")
+
+if __name__ == '__main__':
+    init()
