@@ -4,8 +4,14 @@ def init():
 
     mostra_cabecalho()
 
+    # Define o caminho relativo do arquivo
+    if __name__ == '__main__':
+        path = 'dados/dados.json'
+    else:
+        path = 'exercicios/dados/dados.json'
+
     # Acessa o arquivo
-    with open('dados/dados.json', 'r') as arquivo:
+    with open(path, 'r') as arquivo:
         dados = json.load(arquivo)
 
     while True:
@@ -14,43 +20,44 @@ def init():
             opcao = int(opcao_escolhida)
             match opcao:
                 case 1:
-                    maior_valor_mes(dados)
+                    _maior_valor_mes(dados)
                 case 2:
-                    menor_valor_mes(dados)
+                    _menor_valor_mes(dados)
                 case 3:
-                    valor_acima_media(dados)
+                    _valor_acima_media(dados)
                 case _:
-                    print("\nOpção inválida, digite um número entre 1 e 3!\n")
+                    print("\n\033[91mOpção inválida, digite um número entre 1 e 3!\033[0m\n")
         except:
             if opcao_escolhida == 'sair':
                 return
             else:
-                print("\nOpção inválida, digite um número entre 1 e 3 ou 'sair'!\n")
+                print("\n\033[91mOpção inválida, digite um número entre 1 e 3 ou 'sair'!\033[0m\n")
+                continue
 
 
-def menor_valor_mes(dados):
+def _menor_valor_mes(dados):
     valores = []
 
     for dia in dados:
         if dia['valor'] != 0.0:
             valores.append(dia["valor"])
 
-    return print("\n-- Maior faturamento --\n"
+    return print("\n\033[94m-- Maior faturamento --\n"
                  f"Dia: {valores.index(min(valores)) + 1:18.0f}\n"
-                 f"Valor:   R$ {min(valores):11.2f}\n")
+                 f"Valor:   R$ {min(valores):11.2f}\n\033[0m")
 
-def maior_valor_mes(dados):
+def _maior_valor_mes(dados):
     valores = []
 
     for dia in dados:
         if dia['valor'] != 0.0:
             valores.append(dia["valor"])
 
-    return print("\n-- Maior faturamento --\n"
+    return print("\n\033[94m-- Maior faturamento --\n"
                  f"Dia: {valores.index(max(valores))+1:18.0f}\n"
-                 f"Valor:   R$ {max(valores):11.2f}\n")
+                 f"Valor:   R$ {max(valores):11.2f}\n\033[0m")
 
-def valor_acima_media(dados):
+def _valor_acima_media(dados):
 
     dias_acima_media = 0
 
@@ -68,8 +75,8 @@ def valor_acima_media(dados):
             if dia['valor'] > media:
                 dias_acima_media += 1
 
-    return print("\n-- Dias acima da média --\n"
-                 f"Dias:                  {dias_acima_media}\n")
+    return print("\n\033[94m-- Dias acima da média --\n"
+                 f"Dias:                  {dias_acima_media}\n\033[0m")
 
 
 def mostra_cabecalho():

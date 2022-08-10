@@ -7,7 +7,7 @@ def init():
 
         for letra in string_digitada:
             string_invertida = letra + string_invertida
-        print(f"A string invertida é: {string_invertida}")
+        print(f"\033[94m\nA string invertida é: {string_invertida}\033[0m")
 
         if input("\nRepetir? (S/n): ") in ['N', 'n']:
             break

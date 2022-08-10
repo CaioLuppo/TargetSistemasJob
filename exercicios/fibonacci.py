@@ -5,14 +5,14 @@ def init():
     while True:
         opcao = input("Entrada: ")
         try:
-            numero_escolhido = int(opcao)
-            _verifica_existencia(numero_escolhido)
+            numero = int(opcao)
+            _verifica_existencia(numero)
         except:
             if opcao == 'sair':
                 print('')
                 return
             else:
-                print("Opção inválida.")
+                print("\n\033[91mOpção inválida! Digite um número ou 'sair'!\033[0m\n")
                 continue
 
 
@@ -24,7 +24,7 @@ def _mostra_cabeçalho():
           "**************************\n")
 
     # Descrição
-    print("Digite um número e direi se pertence ou não à sequência! Se quiser voltar ao menu, digite 'sair'.")
+    print("Digite um número e direi se pertence ou não à sequência! Se quiser voltar ao menu, digite 'sair'.\n")
 
 def _verifica_existencia(numero_escolhido):
 
