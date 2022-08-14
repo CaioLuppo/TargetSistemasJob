@@ -1,5 +1,5 @@
 # imports
-from exercicios import fibonacci, percentual, inverter_string
+from exercicios import fibonacci, percentual, inverter_string, faturamento_diario
 
 def mostra_cabecalho():
       # Cabeçalho
@@ -30,7 +30,8 @@ def escolhe_questao():
                                     fibonacci.init()
                                     mostra_cabecalho()
                               case 2:
-                                    print("")
+                                    faturamento_diario.init()
+                                    mostra_cabecalho()
                               case 3:
                                     percentual.init()
                                     mostra_cabecalho()
